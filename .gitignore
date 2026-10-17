@@ -1,0 +1,27 @@
+# Jupyter Notebook temporary files
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Compressed datasets
+*.zip
+
+# Raw dataset folders
+crop_data/
+mandi_data/
+mandi2/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment variables and secrets
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
