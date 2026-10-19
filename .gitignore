@@ -22,3 +22,13 @@ district_latlon.csv
 venv/
 .env
 
+# ZIP archives
+
+APY.csv.zip
+archive (15).zip
+
+# Raw and intermediate datasets
+
+crop_data/
+mandi2/
+mandi_data/
