@@ -6,10 +6,10 @@ import pandas as pd, joblib
 app = FastAPI()
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
 
-model = joblib.load("final_model.pkl")
-d = pd.read_csv("final_data.csv")
-ref = pd.read_csv("crop_reference.csv").set_index("Crop")
-sw = pd.read_csv("state_weather.csv")
+model = joblib.load("models/final_model.pkl")
+d = pd.read_csv("data/processed/final_data.csv")
+ref = pd.read_csv("data/processed/crop_reference.csv").set_index("Crop")
+sw = pd.read_csv("data/processed/state_weather.csv")
 
 cats = {c: sorted(d[c].unique()) for c in ["State", "District", "Crop", "Season"]}
 q = d.groupby("Crop")["Yield"].quantile([0.30, 0.60]).unstack()
