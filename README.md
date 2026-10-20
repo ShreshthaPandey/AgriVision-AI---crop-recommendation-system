@@ -45,24 +45,12 @@ crop recommendation system/
 pip install pandas numpy lightgbm scikit-learn joblib streamlit fastapi uvicorn
 ```
 
-## Run
-**Streamlit**
-```
-cd "C:\Users\Shreshtha Pandey\crop recommendation system"
-streamlit run app.py
-```
-**HTML frontend + FastAPI** (open http://127.0.0.1:8000)
-```
-uvicorn api:app --reload
-```
+
 
 ## Limitations
-- Price, cost, effort and ideal weather ranges are **approximate estimates**, not verified.
-- Weather is a state-level average, so all districts in a state share it.
+- Weather is a state's top 5 producter city estimated , so all districts in a state share it.
 - Prices come from a few days of mandi data, not a full-season average.
-- Soil data is not used yet.
-- Predictions lean towards last year's yield; treat output as guidance, not a guarantee.
+- treat output as guidance, not a guarantee.
 
 ## Future work
-Year-wise weather as a model feature, soil suitability (SoilGrids), verified CACP cost
-data, Hindi interface, and live mandi prices.
+crop yield prediction
